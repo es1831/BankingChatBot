@@ -1,0 +1,33 @@
+ {
+	"accounts": ["Checking", "Savings"],
+	"balances": {
+		"Checking": {
+			"balance": "$45,503"
+		},
+		"Savings": {
+			"balance": "$100,436"
+		}
+	},
+	"transactions": {
+		"January": {
+			"2": {
+				"transaction": "Footlocker",
+				"price": "$88.99"
+			},
+			"8": {
+				"transaction": "Sabre's",
+				"price": "$25"
+			}
+		},
+		"March": {
+			"10": {
+				"transaction": "Chipotle",
+				"price": "$55"
+			},
+			"11": {
+				"transaction": "Disney",
+				"price": "$267.78"
+			}
+		}
+	}
+}

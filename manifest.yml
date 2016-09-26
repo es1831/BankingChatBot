@@ -1,0 +1,4 @@
+---
+applications:
+- name: bankingchatbot
+  memory: 512M

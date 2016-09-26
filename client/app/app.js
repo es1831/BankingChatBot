@@ -57,6 +57,10 @@ app.config(['$routeProvider', '$locationProvider', '$mdThemingProvider', '$httpP
 
 				}]
 			}
+		}).
+		when('/chat_bot', {
+			templateUrl: 'chat_bot/chat_bot.html',
+			controller: 'ChatBotController'
 		});
 		// otherwise({
 		// 	redirectTo: '/'

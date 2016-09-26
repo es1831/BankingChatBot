@@ -32,8 +32,10 @@
 	</div>
 	<span></span>
 	<div layout="row">
-		<md-button class="sidenavButton">
-			<i class="material-icons">help_outline</i>
+		<md-button	class="sidenavButton" 
+					ng-class="{'sidenavButtonSelected': selectedMenu('/chat_bot')}"
+					href="/chat_bot">
+			<i class="material-icons">account_balance</i>
 		</md-button>
 	</div>
 </md-sidenav>
