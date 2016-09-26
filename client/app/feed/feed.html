@@ -1,0 +1,22 @@
+<div layout="column" layout-fill>
+	<ng-include src="'shared/templates/toolbar.html'"></ng-include>
+	<section layout="row" flex>
+		<ng-include src="'shared/templates/sidenav.html'"></ng-include>
+		<div class = "news-feed">
+			<h1 class='md-padding' layout="row" layout-wrap>New York Times Feed</h1>
+			<div class='md-padding' layout="row" layout-wrap>
+				<md-card style="width: 300px;" ng-repeat="article in techNews">
+					<img ng-src = "{{article.multimedia[4].url | trusted}}" class="md-card-image" src="http://placehold.it/150x150">
+					<md-card-content>
+						<h2>{{article.title}}</h2>
+						<p>{{article.byline}}</p>
+					</md-card-content>
+					<div class="md-actions" layout="row" layout-align="end center">
+						<md-button ng-href = "{{article.url}}" target = "_blank">View</md-button>
+					</div>
+				</md-card>
+			</div>
+		</div>
+	</section>
+	<ng-include src="'shared/templates/footer.html'"></ng-include>
+</div>

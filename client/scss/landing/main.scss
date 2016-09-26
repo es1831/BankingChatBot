@@ -1,0 +1,171 @@
+/*********************************************
+  GENERAL AND SHARED
+  ********************************************/
+.sectionContent{
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.anchorScrollArrow{
+	margin-bottom: 0px;
+}
+
+.sidenavLanding{
+	width: 100px;
+	height: 100vw;
+	background-color: #2d87b2;
+	color: white;
+}
+
+.sidenavLandingSelect{
+	padding: 10px;
+	width: 80px;
+}
+
+.projectDescription > h2, .aboutUsDescription > h2, .faqsDescription > h2{
+	color:#2d87b2;	
+	text-align:left;
+}
+
+.devResourcesImage, .aboutUsImage, .faqsImage{
+	flex-basis: 25%;
+	flex-grow: 0;
+}
+.devResourcesImage>img, .aboutUsImage>img, .faqsImage>img{
+	max-width: 200px;
+}
+
+/*********************************************
+  LANDING SECTION
+  ********************************************/
+.headerMenu {
+	padding: 0 30px;
+}
+.headerMenu > h6 {
+	padding: 5px 30px;
+	cursor: pointer;
+	outline: none;
+}
+
+#landingSection{
+	opacity:0.85;
+}
+
+#getStartedButton{
+	border: 2px solid #2d87b2;
+	color: #2d87b2;
+	width: 184px;
+	text-align: center;
+	margin: 0px;
+}
+
+.projectDescription {
+	flex-basis: 50%;
+	flex-grow: 0;
+	padding-bottom: 90px;
+}
+
+.photoDescription {
+	flex-basis: 25%;
+	flex-grow: 0;
+}
+#landingBanner{
+	background-image:url('images/Desktop.png');	
+	background-size: 100%;
+	background-repeat: no-repeat;
+	height: 40vw;
+}
+
+/*********************************************
+  DEV RESOURCES SECTION
+  ********************************************/
+
+.devResourcesDescription{
+	flex-basis: 50%;
+	flex-grow: 0;
+	padding: 30px 0;
+	color: #ffffff;
+}
+.devResourcesDescription > h2 {
+	color: #50e3c2;
+	text-align: left;
+}
+
+#devResourcesSection{
+	background:#2d87b2;
+}
+
+/*********************************************
+  ABOUT US SECTION
+  ********************************************/
+
+#aboutUsSection{
+	background:#edeff1;
+}
+
+.aboutUsDescription{
+	flex-basis: 50%;
+	flex-grow: 0;
+	padding: 30px 0;
+}
+
+/*********************************************
+  FAQs SECTION
+  ********************************************/
+
+.faqsDescription{
+	flex-basis: 50%;
+	flex-grow: 0;
+	padding: 30px 0;
+	text-align: left;
+}
+
+#faqsSection{
+	background:#a0efdd;
+}
+.faqsQuestion{
+	font-weight: bold;
+	margin: 0;
+}
+.faqsAnswer{
+	font-family: "Muli", sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/*********************************************
+  MEDIA QUERIES (MOBILE)
+  ********************************************/
+
+@media only screen and (max-width: 480px) {
+	#landingBanner{
+		background-image:url('images/Mobile.png');	
+		background-size: 100%;
+		background-repeat: no-repeat;
+		height: 124.9vw;
+	}
+	#landingSection{
+		padding: 0;
+	}
+	.sectionContent {
+		flex-direction: column-reverse;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.projectDescription{
+		margin-bottom: 95px;
+	}	
+	#homeSection{
+		flex-basis: 67%;
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+	.projectDescription, .devResourcesDescription, .faqsDescription, .aboutUsDescription {
+		padding: 0 30px;
+	}
+	.aboutUsImage>img, .devResourcesImage>img, .faqsImage>img{
+		padding: 30px;
+	}
+}

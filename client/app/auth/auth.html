@@ -1,0 +1,6 @@
+<div class="authProfile" layout="row" layout-align="end center">
+	<md-button class="md-primary right" ng-if="!isAuthenticated && features.auth" ng-click="authService.login()">Log In</md-button>
+	<md-button class="md-primary right" ng-if="isAuthenticated" ng-click="authService.logout()">Log Out</md-button>
+	<div class="welcomeProfile" ng-if="isAuthenticated">Greetings, {{userProfile.nickname}}</div>
+	<img class="png-icon iconProfile" ng-if="isAuthenticated" ng-src="{{userProfile.picture}}">
+</div>

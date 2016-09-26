@@ -1,0 +1,17 @@
+CURRENTBRANCH=`git rev-parse --abbrev-ref HEAD`
+
+echo "Checking commit branch..."
+if [ "$CURRENTBRANCH" == "master" ]
+  then
+    echo "You cannot commit to master! Only I am the master! MUAHAHAHAHAHAHA!"
+    echo "Please switch to a feature branch!"
+    exit 1
+elif [ "$CURRENTBRANCH" == "develop" ]
+  then
+    echo "You cannot commit to develop! Do you think you are a developer or something?!?!"
+    echo "Please switch to a feature branch!"
+    exit 1
+else
+  exit 0
+fi
+

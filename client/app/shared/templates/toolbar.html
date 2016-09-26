@@ -1,0 +1,6 @@
+<md-toolbar layout="row" class="toolbarShared" ng-style="isLandingStyle === true && {'background': '#fff', 'border-bottom': '1px solid #dcdcdc'}">
+	<img id="sojuLogo" src="images/soju_logo2.png" ng-click='navigateHome()'></img>
+	<span flex></span>
+	<i id="hamburgerMenuButton" hide-gt-xs class="material-icons" ng-click="toggleList()">menu</i>
+	<ng-include src="'auth/auth.html'"></ng-include>
+</md-toolbar>

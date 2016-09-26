@@ -1,0 +1,25 @@
+<div id="container" layout="column" layout-fill>
+	<ng-include src="'shared/templates/toolbar.html'"></ng-include>
+	<section layout="row" flex>
+		<ng-include src="'shared/templates/sidenav.html'"></ng-include>
+		<md-content>
+			<div class='md-padding' layout="row" layout-wrap>
+				<md-card class="newsfeedCard" ng-repeat="article in articles">
+					<img ng-src="{{article.image}}" class="md-card-image" alt="image caption">
+					<md-card-content>
+						<h3><a ng-href="{{article.link}}">{{article.title}}</a></h3>
+						<span>{{article.pubDate}}</span>
+						<p style="font-size: 13px">{{article.description}}</p>
+					</md-card-content>
+					<md-card-footer>
+						<div class="md-actions" layout="row" layout-align="center center">
+							<md-button class="newsfeed newsFeedIconFav"><i class="material-icons">favorite</i></md-button>
+							<md-button class="newsfeed newsFeedIconMenu"><i class="material-icons">menu</i></md-button>
+						</div>
+					</md-card-footer>
+				</md-card>
+			</div>
+		</md-content>
+	</section>
+	<ng-include src="'shared/templates/footer.html'"></ng-include>
+</div>

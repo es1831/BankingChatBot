@@ -1,0 +1,39 @@
+<md-sidenav class="sidenavItem" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-xs')">
+	<div layout="row">
+		<md-button 	class="sidenavButton"
+					ng-class="{'sidenavButtonSelected':selectedMenu('/home')}"
+					href = "/home">
+			<i class="material-icons">home</i>
+		</md-button>
+	</div>
+	<span></span>
+	<div layout="row">
+		<md-button 	class="sidenavButton" 
+					ng-class="{'sidenavButtonSelected': selectedMenu('/user_profile')}" 
+					href = "/user_profile">
+			<i class="material-icons">account_box</i>
+		</md-button>
+	</div>
+	<span></span>
+	<div layout="row">
+		<md-button 	class="sidenavButton"
+					ng-class="{'sidenavButtonSelected': selectedMenu('/feed')}"
+					href = "/feed">
+			<i class="material-icons">view_headline</i>
+		</md-button>
+	</div>
+	<span></span>
+	<div layout="row">
+		<md-button	class="sidenavButton" 
+					ng-class="{'sidenavButtonSelected': selectedMenu('/newsfeed')}"
+					href="/newsfeed">
+			<i class="material-icons">tv</i>
+		</md-button>
+	</div>
+	<span></span>
+	<div layout="row">
+		<md-button class="sidenavButton">
+			<i class="material-icons">help_outline</i>
+		</md-button>
+	</div>
+</md-sidenav>

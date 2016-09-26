@@ -1,0 +1,77 @@
+/* General */
+.userProfileSection{
+	flex-basis: 55%;
+	flex-grow: 0;
+}
+.userProfileContent h2 {
+	color: #fb6878;
+	font-family: "Muli", sans-serif;
+	font-size: 1.5em;
+    font-weight: bold;
+}
+
+md-input-container{
+	margin: 0;
+}
+
+label{
+	font-family: "Muli", sans-serif;
+}
+
+/* Shared */
+.userProfileNameSection >div, .userProfileCityZipStateSection{
+	justify-content: space-between;
+}
+
+.userProfileEmailBdSection, .userProfileAddressLineOne{
+	flex-basis: 60%;
+	flex-grow: 0;
+}
+
+
+/* Name Section */
+.userProfileNameSection > div md-input-container{
+	flex-basis: 45%;
+	flex-grow: 0;	
+}
+
+/* Company Name Section */
+.userProfileCompanyNameSection > div md-input-container{
+	flex-basis: 45%;
+	flex-grow: 0;	
+}
+
+/* City/State/Zip Section */
+.userProfileCityZipStateSection > div md-input-container{
+	flex-basis: 32%;
+	flex-grow: 0;
+}
+
+/* Save Button Section */
+.userProfileSaveButton{
+	text-align: right;
+	margin-top: 20px;
+}
+
+.userProfileSaveButton button{
+	background: #4d99bd;
+	color: #fff;
+}
+
+/* Mobile */
+@media only screen and (max-width: 480px) {
+	.userProfileSection{
+		flex-basis: 100%;
+		flex-grow: 0;
+		padding:10px;
+	}
+	md-input-container{
+		margin: 10px;
+	}
+	.dropdownStyle{
+		margin-bottom: 20px;
+	}
+	.userProfileContent h2 {
+		padding: 0 10px 10px 10px;
+	}
+}

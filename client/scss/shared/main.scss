@@ -1,0 +1,93 @@
+/* Sidenav Section*/
+md-sidenav, md-sidenav.md-locked-open, md-sidenav.md-closed.md-locked-open-add-active {
+ min-width: 88px !important;
+ max-width: 88px !important;
+}
+
+.sidenavItem{
+	opacity:0.85;
+	background: #2d87b2;
+	color: white;
+	height: 100%;
+}
+
+.sidenavButton{
+	padding: 20px;
+	margin: 0px !important;
+}
+.sidenavButtonSelected {
+	border-left: 10px solid #FF4D62;
+	background-color: #2e7a9e;
+}
+/* Sidenav section End*/
+
+/* Footer Section */
+.footerImageSocial{
+	align-items: center;
+	text-align: center;
+}
+.footerImageSocial > #footerSocial{
+	padding: 20px;
+}
+#footer{
+	opacity:0.74;
+	background:#edeff1;
+	padding-left: 30px;
+}
+#addressFooter > h6{
+	text-align: right;
+	margin-right: 20px;
+}
+/* Footer Section End */
+
+
+/* SOJU logo Section */
+#sojuLogo{
+	width: 150px;
+	height: 30px;
+	margin: 15px 60px;
+	cursor: pointer;
+	outline: none;
+}
+/* SOJU logo Section End */
+
+
+/* Toolbar Section */
+md-toolbar.toolbarShared{
+	background-color: #f2f3f5;
+}
+#hamburgerMenuButton{
+	line-height: 70px;
+	margin: 0px 20px 0px 0px;
+	padding: 0px;
+}
+#hamburgerMenuButton:focus{
+	outline: none;
+	cursor: pointer;
+}
+.signInIcon{
+	display: inline-flex;
+	vertical-align: middle;
+	font-size: 13px;
+	line-height: 24px;
+}
+/* Toolbar Section End */
+
+
+@media only screen and (max-width: 480px) {
+	.sidenavItem{
+		margin-top: 70px;
+		height: inherit;
+	}
+	#footer{
+		padding: 0px;
+	}
+	#addressFooter > h6{
+		text-align: center;
+	}
+	#sojuLogo{
+		width: 135px;
+		height: 27px;
+		margin: 20px 25px;
+	}
+}

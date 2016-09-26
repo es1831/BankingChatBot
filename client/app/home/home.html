@@ -1,0 +1,143 @@
+<div id="container" layout="column" layout-fill>
+	<ng-include src="'shared/templates/toolbar.html'"></ng-include>
+	<section layout="row" flex>
+		<ng-include src="'shared/templates/sidenav.html'"></ng-include>
+		<section layout="column" flex class="sectionChartContent" hide-xs>
+			<div layout="column" flex="100" layout-padding>
+				<md-content id="containerHomeRowFirst" class="sectionChartRow" layout="row" layout-xs="column" layout-padding flex="50">
+					<div class="panel sectionChartItem" layout="column" flex="50">
+						<md-toolbar>
+							<div class="md-toolbar-tools">
+								<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+									<i class="material-icons">settings_ethernet</i>
+								</md-button>
+								<h2>
+									<span>Code Quality Monitoring</span>
+								</h2>
+							</div>
+						</md-toolbar>
+						<md-content layout="row" layout-padding flex>
+							<canvas id="radar" class="chart chart-radar" chart-data="radar_data" chart-options="radar_options" chart-labels="radar_labels"></canvas>
+						</md-content>
+					</div>
+					<div class="panel sectionChartItem" layout="column" flex="50">
+						<md-toolbar>
+							<div class="md-toolbar-tools">
+								<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+									<i class="material-icons">bug_report</i>
+								</md-button>
+								<h2>
+									<span>Bugs reported vs fixed</span>
+								</h2>
+							</div>
+						</md-toolbar>
+						<md-content layout="row" layout-padding flex>
+							<canvas id="base" class="chart-bar" chart-colors="bar_colors" chart-data="bar_data" chart-labels="bar_labels" chart-dataset-override="datasetOverride" >
+							</canvas>
+						</md-content>
+					</div>
+				</md-content>
+				<md-content id="containerHomeRowSecond" class="sectionChartRow" layout="row" layout-xs="column" layout-padding flex="50">
+					<div class="panel sectionChartItem" layout="column" flex="50">
+						<md-toolbar>
+							<div class="md-toolbar-tools">
+								<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+									<i class="material-icons">face</i>
+								</md-button>
+								<h2>
+									<span>Developers activity</span>
+								</h2>
+							</div>
+						</md-toolbar>
+						<md-content layout="row" layout-padding flex>
+							<canvas id="base" class="chart-bubble" chart-data="bubble_data" chart-options="bubble_options" ></canvas>
+						</md-content>
+					</div>
+					<div class="panel sectionChartItem" layout="column" flex="50">
+						<md-toolbar>
+							<div class="md-toolbar-tools">
+								<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+									<i class="material-icons">computer</i>
+								</md-button>
+								<h2>
+									<span>Cloud Instance Metrics</span>
+								</h2>
+							</div>
+						</md-toolbar>
+						<md-content layout="row" layout-padding flex layout-align="space-around center">
+							<ui-knob value="first_knob_value" options="first_knob_options"></ui-knob>
+							<ui-knob value="second_knob_value" options="second_knob_options"></ui-knob>
+							<ui-knob value="third_knob_value" options="third_knob_options"></ui-knob>
+						</md-content>
+					</div>
+				</md-content>
+			</div>
+		</section>
+		<section layout="column" flex class="sectionChartContent" hide-gt-sm>
+			<div class="panel sectionChartItem" layout="column">
+				<md-toolbar>
+					<div class="md-toolbar-tools">
+						<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+							<i class="material-icons">settings_ethernet</i>
+						</md-button>
+						<h2>
+							<span>Code Quality Monitoring</span>
+						</h2>
+					</div>
+				</md-toolbar>
+				<md-content layout="row" layout-padding flex>
+					<canvas id="radar sectionChartItem" class="chart chart-radar" chart-data="radar_data" chart-options="radar_options" chart-labels="radar_labels"></canvas>
+				</md-content>
+			</div>
+			<div class="panel sectionChartItem" layout="column">
+				<md-toolbar>
+					<div class="md-toolbar-tools">
+						<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+							<i class="material-icons">bug_report</i>
+						</md-button>
+						<h2>
+							<span>Bugs reported vs fixed</span>
+						</h2>
+					</div>
+				</md-toolbar>
+				<md-content layout="row" layout-padding flex>
+					<canvas id="base" class="chart-bar" chart-colors="bar_colors" chart-data="bar_data" chart-labels="bar_labels" chart-dataset-override="datasetOverride" >
+					</canvas>
+				</md-content>
+			</div>
+			<div class="panel sectionChartItem" layout="column">
+				<md-toolbar>
+					<div class="md-toolbar-tools">
+						<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+							<i class="material-icons">face</i>
+						</md-button>
+						<h2>
+							<span>Developers activity</span>
+						</h2>
+					</div>
+				</md-toolbar>
+				<md-content layout="row" layout-padding flex>
+					<canvas id="base" class="chart-bubble" chart-data="bubble_data" chart-options="bubble_options" ></canvas>
+				</md-content>
+			</div>
+			<div class="panel sectionChartItem" layout="column">
+				<md-toolbar>
+					<div class="md-toolbar-tools">
+						<md-button class="md-icon-button" aria-label="Settings" ng-disabled="true">
+							<i class="material-icons">computer</i>
+						</md-button>
+						<h2>
+							<span>Cloud Instance Metrics</span>
+						</h2>
+					</div>
+				</md-toolbar>
+				<md-content layout="column" layout-padding flex layout-align="center center">
+					<ui-knob value="first_knob_value" options="first_knob_options"></ui-knob>
+					<ui-knob value="second_knob_value" options="second_knob_options"></ui-knob>
+					<ui-knob value="third_knob_value" options="third_knob_options"></ui-knob>
+				</md-content>
+			</div>
+		</section>
+	</section>
+	<ng-include src="'shared/templates/footer.html'"></ng-include>
+</div>

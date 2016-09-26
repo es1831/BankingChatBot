@@ -1,0 +1,66 @@
+
+/*******************************
+	General global settings
+	********************************/
+body{
+		/*overflow-y: hidden;*/
+	}
+* {
+	box-sizing: border-box;
+
+/* Fonts Section */
+	h2{
+		font-family: "Muli", sans-serif;
+		font-size:28px;
+		line-height:34px;
+		font-weight: normal;
+	}
+	h4{
+		font-family: "Muli", sans-serif;
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: normal;
+	}
+	h5{
+		font-family: "Muli", sans-serif;
+		font-style: italic;
+		font-size: 14px;
+		font-weight: normal;
+	}
+	h6{
+		font-family: "Muli", sans-serif;
+		font-size: 12px;
+		font-weight: normal;
+	};
+/* Fonts Section End */
+}
+/*Media query for iPhone5*/
+@media only screen and (max-width: 330px) {
+	h4{
+		font-family: "Muli", sans-serif;
+		font-size: 12px;
+		line-height: 18px;
+		font-weight: normal;
+	}
+	h2{
+		font-family: "Muli", sans-serif;
+		font-size:20px;
+		line-height:28px;
+		font-weight: normal;
+	}
+}
+/*Media query for iPhone5 End*/
+
+/*********************************************
+	Import page specific styles, mixins, variables
+	********************************************/
+
+@import 'mixins/main';
+@import 'variables/main';
+@import 'landing/main';
+@import 'home/main';
+@import 'user_profile/main';
+@import 'newsfeed/main';
+@import 'feed/main';
+@import 'shared/main';
+@import 'auth/main';

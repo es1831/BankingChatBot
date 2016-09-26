@@ -1,0 +1,94 @@
+<div id="container" layout="column" layout-fill>
+ <ng-include src="'shared/templates/toolbar.html'"></ng-include>
+	<div layout="row">
+		<md-content>
+			<div id="landingSection">
+				<section>
+					<md-sidenav class="sidenavLanding" class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+						<md-button class="sidenavLandingSelect" ng-click="gotoAnchor('homeSection')">
+							<i class="material-icons">home</i>
+						</md-button>
+						<md-button class="sidenavLandingSelect" ng-click="gotoAnchor('developerResSection')">
+							<i class="material-icons">build</i>
+						</md-button>
+						<md-button class="sidenavLandingSelect" ng-click="gotoAnchor('aboutUsSection')">
+							<i class="material-icons">people</i>
+						</md-button>
+						<md-button class="sidenavLandingSelect" ng-click="gotoAnchor('faqsSection')">
+							<i class="material-icons">help_outline</i>
+						</md-button>
+						<md-button class="sidenavLandingSelect">
+							<i class="material-icons">face</i>
+						</md-button>
+					</md-sidenav>
+				</section>
+				<section>
+					<md-toolbar flex layout="row" class="headerMenu" hide-xs>
+						<h6 ng-click="gotoAnchor('homeSection')">WHAT IS SOJU</h6>
+						<h6 ng-click="gotoAnchor('devResourcesSection')">RESOURCES</h6>
+						<h6 ng-click="gotoAnchor('aboutUsSection')">ABOUT US</h6>
+						<h6 ng-click="gotoAnchor('faqsSection')">FAQs</h6>
+					</md-toolbar>
+					<div layout="row" id="landingBanner" class="sectionContent">
+						<div flex class="projectDescription">
+							<h2 class="welcomeTitle">Build an application with CODESOJU</h2>
+							<h4 class="welcomeContent">Codesoju has been designed to provide a set of standards, best practices and tools to a developer for the purpose of building modern Enterprise applications. It offers a step-by-step guidance for all aspects of the integrated development cycle.</h4>
+							<md-button ng-if="isAuthenticated || !features.auth" aria-label="Get started" id="getStartedButton" href = "/home">Get started</md-button>
+						</div>
+						<div flex class="photoDescription">
+						</div>
+					</div>
+				</section>
+			</div>
+			<section id="devResourcesSection">
+				<div layout="row" layout-wrap class="sectionContent">
+					<div flex class="devResourcesImage">
+						<img alt="" src="images/graphic_developer_resources.png">
+					</div>
+					<div flex class="devResourcesDescription">
+						<h2>Developer Resources</h2>
+						<h4>Building an Enterprise or a smaller scale App? Not sure how all pieces of the development cycle fit together? Not sure where to start so it is scalable and easily maintanable? We are here to help. We provide you with the best practices and tools to ease the process:</h4>
+						<ol>
+							<li>Generator with Angular1/Angular 2 option will help you with both architecture and design.</li>
+							<li>Documentation will provide you with a reasoning and a guidance on all the tools and standards that were chosen.</li>
+							<li>Cloud Foudry deployment manifest will help you to deploy your app to any cloud.</li>
+							<li>Auth0 feature will help you to secure your app.</li>
+						</ol>
+						<h5 class="anchorScrollArrow">About us</h5>
+						<i class="material-icons" ng-click="gotoAnchor('aboutUsSection')">keyboard_arrow_down</i>
+					</div>
+				</div>
+			</section>
+			<section id="aboutUsSection">
+				<div layout="row" layout-wrap class="sectionContent">
+					<div flex class="aboutUsDescription">
+						<h2>About us</h2>
+						<h4>We are a team of software architects, developers and UX designers with 20+ years of experience. We all worked on large scale Enterprise applications, some of them are currently available worldwide. Our team members have expertise with DevOps, UX Design, Prototyping, UI Frameworks, API Management & Micro-Services, Digital Platforms, Cloud Application Frameworks, etc. Codesoju is an Open Source project and we hope it will be driven by the community.</h4>
+						<h5 class="anchorScrollArrow">FAQs</h5>
+						<i class="material-icons" ng-click="gotoAnchor('faqsSection')">keyboard_arrow_down</i>
+					</div>
+					<div flex class="aboutUsImage">
+						<img alt="" src="images/graphic_about_us.png">
+					</div>
+				</div>
+			</section>
+			<section id="faqsSection">
+				<div layout="row" layout-wrap class="sectionContent">
+					<div flex class="faqsImage">
+						<img alt="" src="images/graphic_faqs.png">
+					</div>
+					<div flex class="faqsDescription">
+						<h2>FAQs</h2>
+						<h4 class="faqsQuestion">Q: Why did you decide to create CodeSoju?</h4>
+						<h4 class="faqsAnswer">A: While working on Enterprise apps we noticed that developers often have to maintain just one or two parts of the development cycle. It is very hard to build something from the scratch and make it robust so it can easily grow if some pieces in the understanding are missing. It is important to keep in mind and to understand the big picture.</h4>
+						<h4 class="faqsQuestion">Q: Why did you chose Node, Angular, Angular2, Typescript, Angular Material?</h4>
+						<h4 class="faqsAnswer">A: The experience shows that Node and Angular are very robust and widely used technologies. We love to explore technologies and we see that Angular2 with Typescript and Angular Material2 are rapidly developing and we think it will grow even faster in the future.</h4>
+						<h4 class="faqsQuestion">Q: Can I create my app with CodeSoju?</h4>
+						<h4 class="faqsAnswer">A: Absolutely! CodeSoju provides you with Yeoman generators to create a scaffold of your app ready to run on multiple devices. It provides you with tools, standards  and documentation. It covers the deployment phase as well. It is designed to make you life as a developer easier. So, of course you can!</h4>
+					</div>
+				</div>
+			</section>
+			<ng-include src="'shared/templates/footer.html'"></ng-include>
+		</md-content>
+	</div>
+</div>

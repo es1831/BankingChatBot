@@ -1,0 +1,27 @@
+/* General Section */
+#containerHome{
+	padding: 0 30px;
+}
+/* General Section End */
+
+
+/* Chart Section */
+.sectionChartItem {
+	overflow: hidden;
+}
+/* Chart Section End */
+
+
+@media only screen and (max-width: 480px) {
+	.sectionChartContent {
+		overflow: auto;
+	}
+
+	.sectionChartItem {
+		overflow: hidden;
+		min-height: 100%;
+	}
+	.sectionChartItem md-content {
+		overflow: hidden;
+	}
+}
