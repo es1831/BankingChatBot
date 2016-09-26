@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('Soju', ['auth0.lock', 'angular-jwt', 'ngRoute', 'ngMaterial', 'ngMessages', 'chart.js', 'ui.knob']);
+var app = angular.module('Soju', ['auth0.lock', 'angular-jwt', 'ngRoute', 'ngMaterial', 'ngMessages', 'chart.js', 'ui.knob', 'ngAnimate']);
 
 app.config(['$routeProvider', '$locationProvider', '$mdThemingProvider', '$httpProvider', 'lockProvider', 'jwtOptionsProvider', function($routeProvider, $locationProvider, $mdThemingProvider, $httpProvider, lockProvider, jwtOptionsProvider) {
 
@@ -60,7 +60,14 @@ app.config(['$routeProvider', '$locationProvider', '$mdThemingProvider', '$httpP
 		}).
 		when('/chat_bot', {
 			templateUrl: 'chat_bot/chat_bot.html',
-			controller: 'ChatBotController'
+			controller: 'ChatBotController',
+			resolve: {
+				initChatBot: ['ChatBotService', function(ChatBotService) {
+
+					return ChatBotService.postMessage();
+
+				}]
+			}
 		});
 		// otherwise({
 		// 	redirectTo: '/'

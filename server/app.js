@@ -12,11 +12,10 @@ var path = require('path'),
 	bodyParser = require('body-parser'),
 	config = require('./configuration/environment/development.js');
 
-require(path.join(__dirname, '/configuration/routes.js'))(app);
 
 app.use(logger('dev'));
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cookieParser());
 
 app.use(express.static(path.join(__dirname, '../bower_components')));
@@ -32,6 +31,7 @@ app.use(function(err, req, res, next) {
 
 });
 
+require(path.join(__dirname, '/configuration/routes.js'))(app);
 
 app.listen(config.PORT, function() {
 

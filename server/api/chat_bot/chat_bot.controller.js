@@ -54,7 +54,7 @@ function updateMessage(input, response) {
 
 
 exports.postMessage = function(req, res) {
-	console.log('How about here', req);
+	console.log('How about here', req.body);
 	var workspace = process.env.WORKSPACE_ID || '4e197f9a-df15-4715-b4ad-760863e2b666';
 	if ( !workspace || workspace === '<workspace-id>' ) {
 	  return res.json({

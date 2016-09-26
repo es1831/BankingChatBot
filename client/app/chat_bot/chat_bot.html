@@ -1,10 +1,37 @@
 <div id="container" layout="column" layout-fill>
 	<ng-include src="'shared/templates/toolbar.html'"></ng-include>
-	<section flex>
+	<section layout = "row">
 		<ng-include src="'shared/templates/sidenav.html'"></ng-include>
-	<input ng-model="message">
-	</input>
-	<button ng-click = "go()">GO</button>
+	<md-content flex>
+	    <section>
+	        <md-list>
+	            <md-subheader class="">Banking Chat Bot<span align="right"> </span> </md-subheader>
+
+	            <md-whiteframe ng-repeat="m in messages track by $index" class="md-whiteframe-z2 message" layout layout-align="center center">
+	                <md-list-item class="md-3-line">
+	                    <!-- <img ng-src="img/user.png" class="md-avatar" alt="User" /> -->
+	                    <div class="md-list-item-text">
+	                        <h3>{{ m.username }}</h3>
+	                        <p>{{m.content}}</p>
+	                    </div>
+	                </md-list-item>
+	            </md-whiteframe>
+
+	        </md-list>
+	    </section>
+
+	    <div>
+
+
+	        <md-input-container flex>
+	            <label>Message</label>
+	            <input ng-model="input" name= 'input'></input> <md-button class="md-raised md-primary" ng-click="send()">Submit</md-button>
+	        </md-input-container>
+
+
+	    </div>
+
+	</md-content>
 	</section>
 	<ng-include src="'shared/templates/footer.html'"></ng-include>
 </div>
