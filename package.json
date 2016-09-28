@@ -16,6 +16,7 @@
     "morgan": "^1.7.0",
     "path": "^0.12.7",
     "request": "^2.74.0",
+    "vcap_services": "^0.2.0",
     "watson-developer-cloud": "^2.4.3",
     "xml2js": "^0.4.17"
   },

@@ -9,25 +9,39 @@
 		}
 	},
 	"transactions": {
-		"January": {
-			"2": {
+		"January": [
+			{
 				"transaction": "Footlocker",
-				"price": "$88.99"
+				"price": "$88.99",
+				"date": "January 2, 2016",
+				"text": "Footlocker: $88.99 at January 2, 2016"
 			},
-			"8": {
+			{
 				"transaction": "Sabre's",
-				"price": "$25"
+				"price": "$25",
+				"date": "January 8, 2016",
+				"text": "Sabre's: $25 at January 8, 2016"
 			}
-		},
-		"March": {
-			"10": {
+		],
+		"March": [
+			{
 				"transaction": "Chipotle",
-				"price": "$55"
+				"price": "$55",
+				"date": "March 10, 2016",
+				"text": "Chipotle: $55 at March 10, 2016"
 			},
-			"11": {
+			{
 				"transaction": "Disney",
-				"price": "$267.78"
+				"price": "$267.78",
+				"data": "March 11, 2016",
+				"text": "Disney: $267.78 at March 11, 2016"
 			}
-		}
-	}
+		]
+	},
+	"allTransactions": [
+		"Footlocker: $88.99 at January 2, 2016",
+		"Sabre's: $25 at January 8, 2016",
+		"Chipotle: $55 at March 10, 2016",
+		"Disney: $267.78 at March 11, 2016"
+	]
 }
