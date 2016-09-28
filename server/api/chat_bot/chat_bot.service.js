@@ -1,9 +1,9 @@
 'use strict';
 
 var bankingInfo = require('../../../banking.json'),
-	fs = require("fs");
-
-
+	jsonfile = require('jsonfile')
+ 
+ 
 exports.getBalance = function(response, account) {
 	
 	if(bankingInfo.balances[account]){
@@ -22,7 +22,7 @@ exports.getBalance = function(response, account) {
 
 };
 
-exports.getList = function(response, text) {
+exports.getListandBalance = function(response, text) {
 	
 	response.output.text[0] = response.output.text[0] + '\n' + bankingInfo.accounts.length.toString() + ' accounts:';
 	
@@ -32,7 +32,21 @@ exports.getList = function(response, text) {
 	
 	}
 
-	response.output.text[0] = response.output.text[0] + '\n' + 'Please choose which account you would like to check.';
+	response.output.text[0] = response.output.text[0] + '\n' + 'Please choose which account you would like to see the balance for.';
+
+	return response;
+
+};
+
+exports.getList = function(response, text) {
+	
+	response.output.text[0] = response.output.text[0] + '\n' + bankingInfo.accounts.length.toString() + ' accounts:';
+	
+	for (var i = 0; i < bankingInfo.accounts.length; i++) {
+		
+		response.output.text[0] = response.output.text[0] + '\n' + (i + 1) + '. ' + bankingInfo.accounts[i];
+	
+	}
 
 	return response;
 
@@ -56,7 +70,7 @@ exports.moveMoney = function(response, text) {
 	bankingInfo.balances[response.context.takeAccount].balance = '$' + (Number(bankingInfo.balances[response.context.takeAccount].balance.replace(/[^0-9\.-]+/g,"")) - parseInt(response.context.amount)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 	bankingInfo.balances[response.context.giveAccount].balance = '$' + (Number(bankingInfo.balances[response.context.giveAccount].balance.replace(/[^0-9\.-]+/g,"")) + parseInt(response.context.amount)).toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,');
 	console.log('info', bankingInfo);
-	fs.writeFile('../../../banking.json', JSON.stringify(bankingInfo), function(err){
-		console.log(err);
-	});
+	jsonfile.writeFile('../../../banking.json', bankingInfo, function (err) {
+	  console.error(err)
+	})
 }

@@ -4,8 +4,8 @@
 		<ng-include src="'shared/templates/sidenav.html'"></ng-include>
 	<md-content flex>
 	    <section>
-	        <md-list>
-	            <md-subheader class="">Banking Chat Bot<span align="right"> </span> </md-subheader>
+	        <md-list class = "chat_messages">
+	            <md-subheader class="md-no-sticky">Banking Chat Bot<span align="right"> </span> </md-subheader>
 
 	            <md-whiteframe ng-repeat="m in messages track by $index" class="md-whiteframe-z2 message" layout layout-align="center center">
 	                <md-list-item class="md-3-line">
@@ -20,7 +20,7 @@
 	        </md-list>
 	    </section>
 
-	    <div>
+	    <div class = "submit">
 
 
 	        <md-input-container flex>
