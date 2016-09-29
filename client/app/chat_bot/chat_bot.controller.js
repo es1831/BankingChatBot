@@ -18,7 +18,7 @@ angular.module('Soju')
 		
 		console.log('What is input', $scope.messages);
 		var formattedInput = {
-				'username': 'me',
+				'username': 'You',
 				'content': $scope.input
 			},
 			text = $scope.input,
