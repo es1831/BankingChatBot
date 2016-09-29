@@ -40,8 +40,6 @@ exports.getListandBalance = function(response, text) {
 
 exports.getList = function(response, text) {
 	
-	response.output.text[0] = response.output.text[0] + '\n' + bankingInfo.accounts.length.toString() + ' accounts:';
-	
 	for (var i = 0; i < bankingInfo.accounts.length; i++) {
 		
 		response.output.text[0] = response.output.text[0] + '\n' + (i + 1) + '. ' + bankingInfo.accounts[i];
